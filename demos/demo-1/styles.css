@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+
+a:focus,
+a:hover {
+    outline: 5px solid white;
+}
+
+body {
+    background-color: #FE4646;
+    font-family: sans-serif;
+}
+
+.title {
+    text-align: center;
+    color: white;
+}
+
+.date {
+    text-align: center;
+    color: white;
+    margin: 0;
+    padding: 20px 0 0;
+    font-size: 34px;
+}
+
+.picker {
+    background-color: #39373A;
+    width: 50%;
+    border-radius: 5px;
+    color: white;
+
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dates {
+    display: flex;
+    flex-direction: row;
+}
+
+.picker .column {
+    display: flex;
+    width: 33.333%;
+    flex-direction: column;
+}
+
+.picker .column a {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 28px;
+    padding: 30px 10px;
+}
