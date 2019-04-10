@@ -4,7 +4,7 @@
 ## Table of contents
 1.  [Gebruiker](#1-Gebruiker)
 2.  [Opdracht](#2-Opdracht)
-3.  [Onderzoek motorische stoornis](#3-Onderzoek-motorische stoornis)
+3.  [Onderzoek motorische stoornis](#3-Onderzoek-motorische-stoornis)
 4.  [Aannames](#4-Aannames)
 5.  [Vragen](#5-Vragen)
 6.  [Exclusive Design Principles](#5-Exclusive-Design-Principles)
