@@ -4,7 +4,7 @@
 ## Table of contents
 1.  [Gebruiker](#1-Gebruiker)
 2.  [Opdracht](#2-Opdracht)
-3.  [Onderzoek motorische stoornis](#3-Onderzoek-motorische-stoornis)
+3.  [Onderzoek motorische stoornis](#3-Onderzoek-motorische stoornis)
 4.  [Aannames](#4-Aannames)
 5.  [Vragen](#5-Vragen)
 6.  [Exclusive Design Principles](#5-Exclusive-Design-Principles)
@@ -33,6 +33,7 @@ Omdat elk persoon met een motorisch stoornis, andere symptomen heeft, maak ik hi
 1. Hoe navigeer je het internet?
 2. Zou een spraak oplossing je helpen?
 3. Heb je een aangepast toetsenbord die je gebruikt?
+4. Kun je website voorbeelden noemen die je makkelijk kunt gebruiken?
 
 ## 6. Exclusive Design Principles
 ### Study Situation
