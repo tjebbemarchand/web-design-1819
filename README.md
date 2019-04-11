@@ -1,5 +1,4 @@
-
-# README web design
+# Web Design
 
 ## Table of contents
 1.  [Gebruiker](#1-Gebruiker)
