@@ -7,7 +7,7 @@
 3. [Onderzoek motorische stoornis](#3-Onderzoek-motorische-stoornis)
 4. [Aannames over Marijn](#4-Aannames-over-Marijn)
 5. [Vragen voor Marijn](#5-Vragen-voor-Marijn)
-6. [Papieren schetsen](#6-Papieren-versies)
+6. [Papieren schetsen](#6-Papieren-schetsen)
 7. [Demo versies](#7-Demo-versies)
 8. [Feedback 1](#8-Feedback-1)
 9. [Concept](#9-Concept)
@@ -83,10 +83,10 @@ Kijk eens naar datepicker suggesties, wat kun je daarmee doen voor Marijn. Input
 
 En hoe zou een range selector werken met een toetsenbord?
 
-## Concept
+## 9. Concept
 Ik ga verder met de datepicker om daar een oplossing voor te bedenken die Marijn kan helpen als hij een datum moet invoeren. Ik wil een demo maken voor een datepicker, die suggesties geeft op basis wat je eerder hebt ingevoerd en ook een optie voor je geboortedatum. Mocht de juiste suggestie er niet tussen staan, dan kun je altijd zelf de gewenste datum invullen. Dit moet dan wel op een manier gebeuren dat het makkelijk kan met een toetsenbord.
 
-## Testplan 1
+## 10. Testplan 1
 ### User scenario
 Marijn heeft een motorische stoornis en gebruikt het web met zijn toetsenbord. Nu wil Marijn naar Amsterdam gaan met de trein, maar daar heb je een OV chipkaart voor nodig. Gelukkig kun je heel gemakkelijk een OV chipkaart aanvragen online. Marijn heeft al veel moeite om tot de aanvraag scherm te komen op de website van OV Chipkaart. Uiteindelijk moet hij ook zijn geboortedatum invullen. Maar hier heeft hij veel moeite mee aangezien het allemaal op de juiste manier ingevuld moet worden. Het zou voor Marijn heel makkelijk zijn als hij dit met zijn toetsenbord in kon vullen.
 
