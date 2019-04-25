@@ -14,6 +14,30 @@ body {
     font-family: sans-serif;
 }
 
+.legend {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    top: 0;
+    left: 0;
+}
+
+.legend h4 {
+    margin: 0;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.legend .legend__keys {
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    padding: 0px 20px 10px 25px;
+}
+
+.legend .legend__keys li {
+    font-size: 12px;
+}
+
 .center {
     position: absolute;
     top: 50%;
@@ -47,6 +71,61 @@ body {
     text-decoration: none;
     color: black;
     pointer-events: none;
+}
+
+.blink-day {
+    animation: blink 1s ease;
+    transform-origin: left;
+}
+
+.blink-month {
+    animation: blink 1s ease;
+    transform-origin: right;
+}
+
+.blink-year {
+    animation: blink 1s ease;
+    transform-origin: bottom;
+}
+
+@keyframes blink {
+    0% {
+        transform: scale(1);
+    }
+    10% {
+        transform: scale(1.1)
+    }
+    20% {
+        transform: scale(1.0);
+    }
+    30% {
+        transform: scale(1.1);
+    }
+    40% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1)
+    }
+    60% {
+        transform: scale(1.0);
+    }
+    70% {
+        transform: scale(1.1);
+    }
+    80% {
+        transform: scale(1);
+    }
+    90% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.days:hover + .datepicker__day {
+    background-color: red;
 }
 
 .datepicker {
@@ -106,13 +185,22 @@ body {
     font-size: 40px;
 }
 
-.month__dropdown {
+.datepicker__month .month__dropdown {
     -webkit-appearance: none;
     font-size: 50px;
     font-weight: 700;
     border: none;
     background: none;
 }
+
+.datepicker__year .year__dropdown {
+    -webkit-appearance: none;
+    font-size: 50px;
+    font-weight: 700;
+    border: none;
+    background: none;
+}
+
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
