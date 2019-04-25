@@ -127,14 +127,17 @@ Het invullen van een datum met of zonder suggestie gaat best goed. Het navigeren
 ## 12. Verbeterpunten
 1. Ik heb een JavaScript functie geschreven die ervoor zorgt dat je maar 1 cijfer kunt invullen per input veld. Er bestaat ook iets als maxlength als HTML attribute, maar deze werkt alleen voor de input type text en niet voor number die ik heb gebruikt.
 
+```javascript
 function maxInput() {
     if (this.value.length > 1) {
         this.value = this.value.slice(0, 1);
     }
 }
+```
 
 2. Ik heb eraan toegevoegd dat wanneer je focus hebt op de maand dropdown, dat je vervolgens het cijfer van de maand kunt klikken op de toetsenbord waar die vervolgens de juiste maand selecteerd.
 
+```javascript
 if (activeElement === month) {
     if (parseInt(number) > 0 && parseInt(number) < 10) {
         if (keys.length === 0) {
@@ -149,7 +152,8 @@ if (activeElement === month) {
         }
     }
 }
- 
+``` 
+
  3. De jaar input heb ik verbeterd door de input te veranderen naar een dropdown. Door dit te doen kon ik een functie schrijven die het mogelijk maakt dat je maar 2 cijfers hoeft in te vullen om een jaar te selecteren. Dus als je 1970 wilt hebben, dan hoef je alleen maar de 7 en de 0 in te voeren. De code komt hetzelfde op neer als van de maand die hierboven beschreven staat, alleen ik sla beide keystrokes op om die vervolgens later samen te voegen.
 
  4. Als idee kreeg ik om een num lock key functionaliteit te maken. Op laptop toetsenborden zijn de num lock keys er meestal eraf gehaald door ruimtegbrek. Dus daarom heb een functie gemaakt die ervoor zorgt dat je de volgende letters kunt gebruiken om een cijfer in te voeren: z: 0, x: 1, c: 2, v: 3, a: 4, s: 5, d: 6, q: 7, w: 8, e: 9.
