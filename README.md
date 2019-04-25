@@ -1,7 +1,7 @@
 
 # Web Design project
 
-[Link naar concept demo](http://www.tjebbemarchand.nl/datepicker)
+[Link naar concept demo](https://laughing-bhaskara-7296a9.netlify.com)
 
 ## Inhoudsopgave
 1. [Marijn de gebruiker](#1-Marijn-de-gebruiker)
