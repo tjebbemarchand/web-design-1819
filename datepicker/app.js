@@ -50,7 +50,6 @@ const keys = [];
 document.addEventListener('keydown', function (event) {
     let key;
     let number = parseInt(numkeys(String(event.key)));
-    console.log(number);
     const activeElement = document.activeElement;
 
     if (activeElement === dayOne || activeElement === dayTwo) { // Input days are in focus
