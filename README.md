@@ -1,7 +1,6 @@
-
 # Web Design project
 
-[Link naar concept demo](https://laughing-bhaskara-7296a9.netlify.com)
+[Link naar concept demo](http://www.tjebbemarchand.nl/datepicker)
 
 ## Inhoudsopgave
 1. [Marijn de gebruiker](#1-Marijn-de-gebruiker)
@@ -150,7 +149,7 @@ if (activeElement === month) {
 				}
 			});
 		}
-        }
+	}
 }
 ```
  
@@ -174,7 +173,16 @@ Deze versie is visueel niet veel veranderd ten opzichte van versie 1. Maar qua f
 5. Naar de volgende element gaat met de spatiebalk
 
 ### Validatie
+Ik heb het volgende kunnen testen met Marijn.
+1. Access keys vond hij niet zo fijn omdat je veel toetsen moest drukken om ergens te komen. Liever handmatig naar de plek toegaan.
+2. De num lock keys zaten een beetje te dicht op elkaar.
+3. Met het invoeren van de maanden had ik nog een bug dat je geen oktober, november en december kon invoeren. Dit is omdat deze maanden 2 cijfers hebben. Dit had Marijn al gelijk ontdekt bij het testen van mijn app. Dit kan ik aanpassen door andere keys als 10 enzovoort te laten worden.
+4. Het jaar invoer ging nu makkelijker doordat je maar 2 cijfers in hoefden te voeren in plaats van 4.
 
+### Wat heb ik nog meer genoteerd
+Mij is nog een paar dingen opgevallen over Marijn.
+- Marijn wil het liefst de enter toets gebruiken om iets te bevestigen in plaatsen een andere key.
+- Als Marijn de w a s d toetsen gebruikt om te navigeren, dan zou hij het liefst de tab key willen gebruiken omdat die dichter bij de w a s d toetsen zitten.
 
 ## 14. Exclusive Design Principles
 ### Study situation
@@ -196,22 +204,16 @@ Deze punten zijn er uit mijn onderzoek uitgekomen. Met deze punten heb ik ook re
 Zoveel mogelijk conventies negeren die je normaal zou gebruiken. Iets nieuws proberen te maken met puur HTML, CSS en JavaScript. Zeker als je gaat ontwerpen voor 1 gebruiker, dan hoef je alleen maar iets te maken wat voor hem werkt.
 
 Ik heb daarom geprobeerd zoveel mogelijk conventies te verwijderen en zoveel mogelijk zelf te maken.
-
 - Voor de dagen en maanden heb ik niet de standaard input type gebruikt om die te kunnen selecteren. Ik heb mijn eigen datepicker gemaakt met CSS en JavaScript. Om zo nog een betere applicatie te maken die hij kan gebruiken.
-
 - De dagen input zijn los getrokken van elkaar. Nu heb je 2 input velden waarbij eerste input tot en met de 3 gaat en de tweede input gaat tot en met de 9. Zo kun 1 tot en met 31 selecterd door maar heel weinig te klikken. Normaal als je dag 22 nodig hebt, zou je 22 keer op de pijltoets moet klikken. Nu klik je 2x op pijl naar boven, tab, en 2x op de laatste input.
-
 - Voor nog snellere selectie van een datum, maak ik gebruik van suggesties. Boven de datepicker staan er een paar suggesties en zodra je daarop klikt veranderd de datepicker met de datum van de suggestie.
 
 ### Prioritise identity
 Focussen voor 1 specifieke gebruiker. Het maken van een functie die het handig maakt voor die gebruiker. Voor het gesprek heb ik iets gemaakt waarvan ik dacht dat het hem zou helpen. Tijdens het gesprek ben ik erachter gekomen dat er nog meer functies zijn die toegevoegd kunnen worden om het handiger te maken.
 
 - Je kunt het cijfer van de maand klikken en de juiste maand wordt geselecteerd in de dropdown.
-
 - Om het makkelijker te maken om een jaar in te vullen, hoef je alleen de laatste 2 cijfers van het jaar in te voeren om een jaar te selecteren.
-
 - Voor Marijn is het lastig als hij van de ene kant naar de andere kant van het toetsenbord moet. Daarom heb ik num lock keys toegevoegd op de letters.
-
 - Ik heb access keys gebruikt om snel te wisselen van de dagen, maand en jaar input velden.
 
 ### Add nonsense

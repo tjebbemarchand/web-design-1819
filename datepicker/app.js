@@ -25,22 +25,22 @@ dayTwo.addEventListener('input', maxInput);
 dayOne.addEventListener('change', checkInputs);
 dayTwo.addEventListener('change', checkInputs);
 
-setInterval(function() {
-    if(document.activeElement === dayOne) {
+setInterval(function () {
+    if (document.activeElement === dayOne) {
         const day = document.querySelector('.datepicker .datepicker__day');
-        if(day.classList !== 'blink-day') {
+        if (day.classList !== 'blink-day') {
             day.classList.add('blink-day');
         }
     }
-    if(document.activeElement === month) {
+    if (document.activeElement === month) {
         const month = document.querySelector('.datepicker .datepicker__month');
-        if(month.classList !== 'blink-month') {
+        if (month.classList !== 'blink-month') {
             month.classList.add('blink-month');
         }
     }
-    if(document.activeElement === year) {
+    if (document.activeElement === year) {
         const year = document.querySelector('.datepicker .datepicker__year');
-        if(year.classList !== 'blink-year') {
+        if (year.classList !== 'blink-year') {
             year.classList.add('blink-year');
         }
     }
@@ -50,6 +50,7 @@ const keys = [];
 document.addEventListener('keydown', function (event) {
     let key;
     let number = parseInt(numkeys(String(event.key)));
+    console.log(number);
     const activeElement = document.activeElement;
 
     if (activeElement === dayOne || activeElement === dayTwo) { // Input days are in focus
@@ -59,7 +60,7 @@ document.addEventListener('keydown', function (event) {
         checkInputs();
         activeElement.select();
     } else if (activeElement === month) { // Month is in focus
-        if (parseInt(number) > 0 && parseInt(number) < 10) {
+        if (parseInt(number) > 0 && parseInt(number) < 13) {
             if (keys.length === 0) {
                 keys.push(number);
                 const selectedMonth = keys[0];
@@ -122,6 +123,15 @@ function numkeys(key) {
         case 'e':
             number = 9;
             break;
+        case 'r':
+            number = 10;
+            break;
+        case 't':
+            number = 11;
+            break;
+        case 'y':
+            number = 12;
+            break;
         default:
             number = parseInt(key);
             break;
@@ -170,7 +180,7 @@ function changeDateSuggestion(dayValue, monthValue, yearValue) {
     });
 
     year.querySelectorAll('option').forEach(function (dropdown) {
-        if (dropdown.value == yearValue) {
+        if (dropdown.value == yearValue.toString().substr(2, 4)) {
             dropdown.selected = 'selected';
         }
     });
