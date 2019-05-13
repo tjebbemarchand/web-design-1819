@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Datepicker</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="static/css/styles.css">
 </head>
 
 <body>
-    <div class="legend">
+    <div class="legend" style="display:none;">
         <h4>Legenda</h4>
         <ul class="legend__keys">
             <li>Spatie om vooruit te gaan</li>
@@ -24,15 +24,40 @@
         </ul>
     </div>
     <div class="center">
+        <h2>Datum suggesties</h2>
+        <div class="toggle-legend">
+            <input class="focussable" type="checkbox" id="toggle-legend"><span>Toggle legenda</span>
+        </div>
         <div class="suggestions">
             <div class="suggestions__suggestion">
-                <a href="#" tabindex="0" class="focussable"><span data-day="08" class="day">08</span> <span
-                        data-month="9" class="month">september</span> <span data-year="1994"
-                        class="year">1994</span></a>
+                <h4>Geboortedatum Marijn</h4>
+                <a class="focussable" href="#" tabindex="0"><span data-day="12" class="day">12</span> <span data-month="3"
+                        class="month">maart</span> <span data-year="1970" class="year">1970</span></a>
             </div>
             <div class="suggestions__suggestion">
-                <a href="#" tabindex="0" class="focussable"><span data-day="12" class="day">12</span> <span
-                        data-month="6" class="month">juni</span> <span data-year="2019" class="year">2019</span></a>
+                <h4>Geboortedatum vrouw</h4>
+                <a class="focussable" href="#" tabindex="0"><span data-day="31" class="day">31</span> <span data-month="1"
+                        class="month">januari</span> <span data-year="1972" class="year">1972</span></a>
+            </div>
+            <div class="suggestions__suggestion">
+                <h4>Geboortedatum zoon</h4>
+                <a class="focussable" href="#" tabindex="0"><span data-day="16" class="day">16</span> <span data-month="8"
+                        class="month">augustus</span> <span data-year="1998" class="year">1998</span></a>
+            </div>
+            <div class="suggestions__suggestion">
+                <h4>Geboortedatum dochter</h4>
+                <a class="focussable" href="#" tabindex="0"><span data-day="23" class="day">23</span> <span data-month="7"
+                        class="month">juli</span> <span data-year="2001" class="year">2001</span></a>
+            </div>
+            <div class="suggestions__suggestion">
+                <h4>Belasting aangifte</h4>
+                <a class="focussable" href="#" tabindex="0"><span data-day="01" class="day">01</span> <span data-month="7"
+                        class="month">juli</span> <span data-year="2019" class="year">2019</span></a>
+            </div>
+            <div class="suggestions__suggestion">
+                <h4>Rock band concert</h4>
+                <a class="focussable" href="#" tabindex="0"><span data-day="18" class="day">18</span> <span data-month="10"
+                        class="month">oktober</span> <span data-year="2019" class="year">2019</span></a>
             </div>
         </div>
 
@@ -65,13 +90,12 @@
                 <select accesskey="j" class="year__dropdown focussable">
 
                 </select>
-                <!-- <input accesskey="j" placeholder="Jaar" type="number" min="1900" max="2050" value="2019"
-                    onclick="this.select();"> -->
             </div>
+            <button class="add-to-calendar focussable">Toevoegen aan agenda</button>
         </div>
     </div>
 
-    <script src="app.js"></script>
+    <script src="static/js/app.js"></script>
 </body>
 
 </html>

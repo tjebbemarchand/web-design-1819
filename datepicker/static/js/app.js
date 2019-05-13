@@ -1,8 +1,11 @@
+const legend = document.querySelector('.legend');
 const suggestions = document.querySelectorAll('.suggestions .suggestions__suggestion');
 const dayOne = document.querySelector('.datepicker__day .days input:first-child');
 const dayTwo = document.querySelector('.datepicker__day .days input:last-child');
 const month = document.querySelector('.datepicker__month .month__dropdown');
 const year = document.querySelector('.datepicker__year .year__dropdown');
+const toggleLegend = document.querySelector('#toggle-legend');
+const addCalendarBtn = document.querySelector('.add-to-calendar');
 
 for (let i = 1930; i < new Date().getFullYear() + 8; i++) {
     year.insertAdjacentHTML('beforeend',
@@ -17,6 +20,14 @@ suggestions.forEach(function (suggestion) {
         const month = data[1].dataset.month;
         const year = data[2].dataset.year;
         changeDateSuggestion(day, month, year);
+
+        if(day === '12' || day === '31' || day === '16' || day === '23') {
+            changeBackground('static/img/slingers.jpg');
+        } else if(day === '01') {
+            changeBackground('static/img/belastingsdienst.jpg');
+        } else if(day === '18') {
+            changeBackground('static/img/guitar.jpg');
+        }
     });
 });
 
@@ -24,27 +35,7 @@ dayOne.addEventListener('input', maxInput);
 dayTwo.addEventListener('input', maxInput);
 dayOne.addEventListener('change', checkInputs);
 dayTwo.addEventListener('change', checkInputs);
-
-setInterval(function () {
-    if (document.activeElement === dayOne) {
-        const day = document.querySelector('.datepicker .datepicker__day');
-        if (day.classList !== 'blink-day') {
-            day.classList.add('blink-day');
-        }
-    }
-    if (document.activeElement === month) {
-        const month = document.querySelector('.datepicker .datepicker__month');
-        if (month.classList !== 'blink-month') {
-            month.classList.add('blink-month');
-        }
-    }
-    if (document.activeElement === year) {
-        const year = document.querySelector('.datepicker .datepicker__year');
-        if (year.classList !== 'blink-year') {
-            year.classList.add('blink-year');
-        }
-    }
-}, 100)
+addCalendarBtn.addEventListener('click', playSound);
 
 const keys = [];
 document.addEventListener('keydown', function (event) {
@@ -86,8 +77,49 @@ document.addEventListener('keydown', function (event) {
                 }
             }
         }
+    } else if (activeElement === toggleLegend) {
+        if(event.key === 'Enter') {
+            legendToggle();
+            if(toggleLegend.checked === false) {
+                toggleLegend.checked = true;
+            } else {
+                toggleLegend.checked = false;
+            }
+        }
+    } else if(activeElement === addCalendarBtn) {
+        if(event.key === 'Enter') {
+            if(dayOne.value === '1' && dayTwo.value === '8') {
+                playSound('static/audio/guitar-hard-rock-sound.m4a');
+            } else {
+                playSound('static/audio/sound-effect.m4a');
+            }
+        }
     }
 });
+
+toggleLegend.addEventListener('change', function() {
+    legendToggle();
+});
+
+function changeBackground(image) {
+    document.body.style.background = `url(${image})`;
+    document.body.style.backgroundSize = 'cover';
+    document.body.style.backgroundRepeat = 'no-repeat';
+}
+
+function legendToggle() {
+    if(legend.style.display === 'none') {
+        legend.style.display = 'block';
+    } else {
+        legend.style.display = 'none';
+    }
+}
+
+function playSound(audio) {
+    const sound = new Audio(audio);
+    sound.loop = false;
+    sound.play();
+}
 
 function numkeys(key) {
     let number;
@@ -155,6 +187,8 @@ function checkInputs() {
         if (dayTwoValue > 1) {
             dayTwo.value = 0;
         }
+    } else if(dayOneValue > 3) {
+        alert('Nee Marijn! Een maand heeft niet meer dan 31 dagen 😄');
     } else {
         dayTwo.max = 9;
     }
@@ -226,3 +260,24 @@ function focusNextElement(event) {
     }
     state.previousKey = event.key;
 }
+
+// setInterval(function () {
+//     if (document.activeElement === dayOne) {
+//         const day = document.querySelector('.datepicker .datepicker__day');
+//         if (day.classList !== 'blink-day') {
+//             day.classList.add('blink-day');
+//         }
+//     }
+//     if (document.activeElement === month) {
+//         const month = document.querySelector('.datepicker .datepicker__month');
+//         if (month.classList !== 'blink-month') {
+//             month.classList.add('blink-month');
+//         }
+//     }
+//     if (document.activeElement === year) {
+//         const year = document.querySelector('.datepicker .datepicker__year');
+//         if (year.classList !== 'blink-year') {
+//             year.classList.add('blink-year');
+//         }
+//     }
+// }, 100)

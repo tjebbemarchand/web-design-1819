@@ -4,13 +4,18 @@
 
 a:focus,
 input:focus,
-select:focus {
+select:focus,
+button:focus {
     outline: 3px solid red;
 }
 
 body {
-    background: rgb(50, 125, 255);
-    background: radial-gradient(circle, rgba(50, 125, 255, 1) 0%, rgba(69, 63, 175, 1) 100%);
+    /* background: url('calendar-dark.jpg'); */
+    background: url('../img/calendar-dark.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background: rgb(50, 125, 255);
+    background: radial-gradient(circle, rgba(50, 125, 255, 1) 0%, rgba(69, 63, 175, 1) 100%); */
     font-family: sans-serif;
 }
 
@@ -19,6 +24,7 @@ body {
     background-color: rgba(255, 255, 255, 0.9);
     top: 0;
     left: 0;
+    width: 300px;
 }
 
 .legend h4 {
@@ -45,83 +51,56 @@ body {
     transform: translate(-50%, -50%);
 }
 
+.center h2:first-child {
+    font-size: 16px;
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    color: white;
+}
+
+.toggle-legend span {
+    color: white;
+}
+
 .suggestions {
     display: grid;
-    grid-template-columns: 1fr;
-    /* grid-template-rows: 2fr; */
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
 
-    width: 300px;
     margin: 0 auto;
     margin-bottom: 10px;
 }
 
 .suggestions div {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.95);
     cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 40px;
 }
 
-.suggestions .suggestions__suggestion:not(:last-child) {
-    margin: 10px 0;
+.suggestions div h4 {
+    margin: 0;
+    padding: 0;
+}
+
+.suggestions div h4 {
+    padding-left: 10px;
+    font-size: 12px;
+    font-weight: normal;
 }
 
 .suggestions div a {
-    font-size: 24px;
+    font-size: 14px;
     font-weight: 700;
-    padding-left: 20px;
+    padding-left: 10px;
     text-decoration: none;
     color: black;
     pointer-events: none;
-}
-
-.blink-day {
-    animation: blink 1s ease;
-    transform-origin: left;
-}
-
-.blink-month {
-    animation: blink 1s ease;
-    transform-origin: right;
-}
-
-.blink-year {
-    animation: blink 1s ease;
-    transform-origin: bottom;
-}
-
-@keyframes blink {
-    0% {
-        transform: scale(1);
-    }
-    10% {
-        transform: scale(1.1)
-    }
-    20% {
-        transform: scale(1.0);
-    }
-    30% {
-        transform: scale(1.1);
-    }
-    40% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1)
-    }
-    60% {
-        transform: scale(1.0);
-    }
-    70% {
-        transform: scale(1.1);
-    }
-    80% {
-        transform: scale(1);
-    }
-    90% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
 }
 
 .days:hover + .datepicker__day {
@@ -136,15 +115,10 @@ body {
 
     width: 300px;
     margin: 0 auto;
-
-    /* position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
 }
 
 .datepicker div {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.95);
 
     display: flex;
     justify-content: center;
@@ -201,6 +175,15 @@ body {
     background: none;
 }
 
+.add-to-calendar {
+    grid-column: 1 / -1;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 14px;
+    background-color: white;
+}
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -228,4 +211,55 @@ input[type=number] {
 ::-ms-input-placeholder {
     /* Microsoft Edge */
     font-size: 18px;
+}
+
+.blink-day {
+    animation: blink 1s ease;
+    transform-origin: left;
+}
+
+.blink-month {
+    animation: blink 1s ease;
+    transform-origin: right;
+}
+
+.blink-year {
+    animation: blink 1s ease;
+    transform-origin: bottom;
+}
+
+@keyframes blink {
+    0% {
+        transform: scale(1);
+    }
+    10% {
+        transform: scale(1.1)
+    }
+    20% {
+        transform: scale(1.0);
+    }
+    30% {
+        transform: scale(1.1);
+    }
+    40% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1)
+    }
+    60% {
+        transform: scale(1.0);
+    }
+    70% {
+        transform: scale(1.1);
+    }
+    80% {
+        transform: scale(1);
+    }
+    90% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }

@@ -1,6 +1,6 @@
 # Web Design project
 
-[Link naar concept demo](http://www.tjebbemarchand.nl/datepicker)
+[Link naar concept demo](https://laughing-bhaskara-7296a9.netlify.com/)
 
 ## Inhoudsopgave
 1. [Marijn de gebruiker](#1-Marijn-de-gebruiker)
@@ -17,6 +17,7 @@
 12. [Verbeterpunten](#12-Verbeterpunten)
 13. [Gesprek 3](#13-Gesprek-3)
 14. [Exclusive Design Principles](#14-Exclusive-Design-Principles)
+15. [Nieuwe iteratie](#15-Nieuwe-iteratie)
 
 ## 1. Marijn de gebruiker
 Ik werk een opdracht uit voor mijn testgebruiker Marijn. Marijn heeft een motorische stoornis en is daardoor niet in staat om een muis te gebruiken.
@@ -220,3 +221,59 @@ Focussen voor 1 specifieke gebruiker. Het maken van een functie die het handig m
 Het toevoegen van functies die misschien helemaal niet nodig zijn. Om zo misschien erachter te komen dat die functies verder uitgebouwd kunnen worden tot iets wat wel handig is.
 
 Nu heb ik toegevoegd dat wanneer je focust op de dagen, maand of jaar input velden. Dat je een blink animatie krijgt die op een neer gaat.
+
+## Nieuwe iteratie
+Tijdens de beoordeling was mijn proces en uitslag nog niet goed genoeg. Hierbij beschrijf ik wat ik gedaan heb om mijn project te verbeteren.
+
+### User scenario
+Marijn heeft een motorische stoornis en gebruikt het web met een toetsenbord. Marijn heeft moeite met fijne motoriek en moet zo zijn computer gebruiker wat voor hem fijn is.
+Datepickers heeft Marijn moeite mee. Als hij datums moet invullen in zijn agenda, of op het internet zal dat even duren voordat hij bij de juiste datum is.
+Marijn moet bij de gemeente de geboortedatums invullen van al zijn mede bewoners. Dit kost voor iemand die geen motorische stoornis heeft al wat moeite omdat je ver terug moet. Maar voor Marijn zal dit nog meer last bezorgen omdat hij daarmee nog langzamer is.
+Nu is er een datepicker waar standaard al de geboortedatums instaan van zijn dierbare personen. Maar hier staan ook datums in die hij vaak moet invullen of die hij zojuist ergens anders heeft ingevuld.
+
+
+Met deze user scenario ben ik opnieuw gaan kijken naar de huidige datepicker.
+
+### Aanpassingen die ik doorgevoerd heb
+Om meer identiteit te geven aan de datepicker.
+- Uitstraling aangepast
+- Je krijgt verschillende achtergrond te zien gebaseerd op de datum suggestie die je aanklikt
+- Ook krijg je gebaseerd op de datum, een ander geluid effect te horen als je op toevoegen aan kalendar klikt
+- Wanneer er fout ingetypt wordt, krijg je een persoonlijk melding
+- Legende optioneel gemaakt met een checkbox
+- Meer datum suggesties met persoonlijke datums
+
+### Exclusive Design Principles
+#### Study situation
+In het project bestuderen we Marijn die een motorische stoornis heeft. We bestuderen hem over hoe hij zijn computer, het web en vooral hoe hij onze applicatie gebruikt. Hij was twee van de drie keer beschikbaar voor een sessie om te testen. De eerste keer had hij jammer genoeg geen tijd. De eerste keer toen Marijn kwam, konden we onze ideeën testen waar we feedback op kregen. De laatste keer dat hij komt, kunnen we de feedback die we toegepast hebben valideren om te controleren of we het zo goed gedaan hebben.
+
+Marijn heeft moeite met en gebruik:
+- Gebruikt sticky keys
+- Gebruikt 1 hand (linkerhand)
+- Moeite met motoriek
+- Optillen van hand heeft hij moeite mee
+- Moeite met praten
+- Gebruikt de spatiebalk
+- Gebruikt zijn trackpad ook maar weinig
+- Wil graag zo weinig mogelijk toetsen indrukken
+
+Deze punten zijn er uit mijn onderzoek uitgekomen. Met deze punten heb ik ook rekening mee gehouden tijdens het ontwerpen van mijn ontwerp.
+
+#### Ignore conventions
+Zoveel mogelijk conventies negeren die je normaal zou gebruiken. Iets nieuws proberen te maken met puur HTML, CSS en JavaScript. Zeker als je gaat ontwerpen voor 1 gebruiker, dan hoef je alleen maar iets te maken wat voor hem werkt.
+
+Ik heb daarom geprobeerd zoveel mogelijk conventies te verwijderen en zoveel mogelijk zelf te maken.
+- Voor de dagen en maanden heb ik niet de standaard input type gebruikt om die te kunnen selecteren. Ik heb mijn eigen datepicker gemaakt met CSS en JavaScript. Om zo nog een betere applicatie te maken die hij kan gebruiken.
+- De dagen input zijn los getrokken van elkaar. Nu heb je 2 input velden waarbij eerste input tot en met de 3 gaat en de tweede input gaat tot en met de 9. Zo kun 1 tot en met 31 selecterd door maar heel weinig te klikken. Normaal als je dag 22 nodig hebt, zou je 22 keer op de pijltoets moet klikken. Nu klik je 2x op pijl naar boven, tab, en 2x op de laatste input.
+- Voor nog snellere selectie van een datum, maak ik gebruik van suggesties. Boven de datepicker staan er een paar suggesties en zodra je daarop klikt veranderd de datepicker met de datum van de suggestie.
+
+#### Prioritise identity
+Focussen voor 1 specifieke gebruiker. Het maken van een functie die het handig maakt voor die gebruiker. Voor het gesprek heb ik iets gemaakt waarvan ik dacht dat het hem zou helpen. Tijdens het gesprek ben ik erachter gekomen dat er nog meer functies zijn die toegevoegd kunnen worden om het handiger te maken.
+
+Ik heb de identiteit van Marijn doorgevoerd in de app.
+Zo heb ik specfieke achtergrond die bij Marijn passen erin gezet, heb ik meer datum suggesties geplaatst die voor Marijn heel nuttig zijn en wordt er een melding getoond als Marijn de datum verkeerd intypt.
+
+#### Add nonsense
+Het toevoegen van functies die misschien helemaal niet nodig zijn. Om zo misschien erachter te komen dat die functies verder uitgebouwd kunnen worden tot iets wat wel handig is.
+
+Om nonsense aan de app toe te voegen, speel ik speciale geluidseffecten af wanneer Marijn op de add calendar button klikt. De geluidseffecten zijn niet nodig voor de functionaliteit, maar brengen weer meer karakter met zich mee.
