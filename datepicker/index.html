@@ -26,7 +26,7 @@
     <div class="center">
         <h2>Datum suggesties</h2>
         <div class="toggle-legend">
-            <input class="focussable" type="checkbox" id="toggle-legend"><span>Toggle legenda</span>
+            <input tabindex="0" class="focussable" type="checkbox" id="toggle-legend"><span>Toggle legenda</span>
         </div>
         <div class="suggestions">
             <div class="suggestions__suggestion">
@@ -64,14 +64,14 @@
         <div class="datepicker">
             <div class="datepicker__day">
                 <div class="days">
-                    <input class="focussable" max="3" accesskey="d" placeholder="Dag" type="number" min="0" max="3"
+                    <input tabindex="0" class="focussable" max="3" accesskey="d" placeholder="Dag" type="number" min="0" max="3"
                         value="0" onclick="this.select();">
-                    <input class="focussable" max="9" maxlength="1" placeholder="Dag" type="number" min="0" max="9"
+                    <input tabindex="0" class="focussable" max="9" maxlength="1" placeholder="Dag" type="number" min="0" max="9"
                         value="1" onclick="this.select();">
                 </div>
             </div>
             <div class="datepicker__month">
-                <select accesskey="m" class="month__dropdown focussable">
+                <select tabindex="0" accesskey="m" class="month__dropdown focussable">
                     <option value="1" data-key="1">Jan</option>
                     <option value="2" data-key="2">Feb</option>
                     <option value="3" data-key="3">Mar</option>
@@ -87,11 +87,11 @@
                 </select>
             </div>
             <div class="datepicker__year">
-                <select accesskey="j" class="year__dropdown focussable">
+                <select tabindex="0" accesskey="j" class="year__dropdown focussable">
 
                 </select>
             </div>
-            <button class="add-to-calendar focussable">Toevoegen aan agenda</button>
+            <button tabindex="0" class="add-to-calendar focussable">Toevoegen aan agenda</button>
         </div>
     </div>
 
