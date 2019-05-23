@@ -276,4 +276,37 @@ Zo heb ik specfieke achtergrond die bij Marijn passen erin gezet, heb ik meer da
 #### Add nonsense
 Het toevoegen van functies die misschien helemaal niet nodig zijn. Om zo misschien erachter te komen dat die functies verder uitgebouwd kunnen worden tot iets wat wel handig is.
 
-Om nonsense aan de app toe te voegen, speel ik speciale geluidseffecten af wanneer Marijn op de add calendar button klikt. De geluidseffecten zijn niet nodig voor de functionaliteit, maar brengen weer meer karakter met zich mee.
+Om nonsense aan de app toe te voegen, speel ik speciale geluidseffecten af wanneer Marijn op de add calendar button klikt. Ook laat ik verschillende achtergronden zien op basis van de ingevulde datum.
+
+### Testen met gebruikers
+Ik heb mijn applicatie met meerdere gebruikers getest. Hier zijn een paar aanbevelingen uit gekomen waar ik zelf nog over had nagedacht.
+
+#### Karin
+Ik heb met Karin mijn applicatie getest. Ze gaf alleen de tip om de legend aan te zetten zodat ze kon lezen hoe de applicatie gebruikt kon worden. Ze had geen moeite om door de applicatie te navigeren met het toetsenbord.
+Ze gaf een aantal aanbevelingen om de applicatie te verbeteren.
+
+![Datepicker](docs/testen/test-karin.jpg)
+
+#### Chelsea
+Daarna heb ik Chelsea gevraagt om te willen testen. Ook hier gaf ik alleen de tip mee om de legend aan te zetten. Dit vond ze erg duidelijk. Chelsea heeft mij vooral tip gegeven om de applicatie te verbeteren. Waar ik zelf nog niet aan gedacht had.
+
+![Datepicker](docs/testen/test-chelsea.jpg)
+
+#### Lock
+Lock heeft ook mijn applicatie getest. Hier zijn nog meer aanbevelingen uitgekomen. Ook bij Lock heb ik alleen gezegd dat je de legenda aan moet zetten zodat je weer hoe je door de app moet gaan.
+Lock gaf een paar ideeën die heel tof waren om te implementeren.
+
+![Datepicker](docs/testen/test-lock.jpg)
+
+Uit de test kwamen de volgende aanbevelingen:
+
+- Andere geluidjes toevoegen voor verschillende datums
+- Achtergrond weer veranderen als je de datum aanpast
+- Wanneer je een dag kiest, gelijk naar de volgende input gaan
+- Styling van de suggesties differentieren met de datum inputs
+- Als je een suggestie selecteert, gelijk doorgaan de datum invoer
+- Uitleg is nog verkeerd beschreven
+- De 0, - en = tekens als 10, 11 en 12 gebruiken
+- Uitleg jaar input klopt niet als je de dropdown geopend hebt
+
+Als ik alle aanbevelingen zo op een rijtje zet, is het best veel die ik kan toepassen op de applicatie.
