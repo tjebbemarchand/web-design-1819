@@ -225,12 +225,17 @@ Nu heb ik toegevoegd dat wanneer je focust op de dagen, maand of jaar input veld
 ## Nieuwe iteratie
 Tijdens de beoordeling was mijn proces en uitslag nog niet goed genoeg. Hierbij beschrijf ik wat ik gedaan heb om mijn project te verbeteren.
 
+### Feedback punten
+- Er zit te weinig Marijn in de datepicker.
+- De add nonsense hoort niet bij je testpersoon.
+- De datum suggesties zijn niet gebaseerd op je testpersoon.
+- De exclusive design principles zijn niet goed toegepast.
+
 ### User scenario
 Marijn heeft een motorische stoornis en gebruikt het web met een toetsenbord. Marijn heeft moeite met fijne motoriek en moet zo zijn computer gebruiker wat voor hem fijn is.
 Datepickers heeft Marijn moeite mee. Als hij datums moet invullen in zijn agenda, of op het internet zal dat even duren voordat hij bij de juiste datum is.
 Marijn moet bij de gemeente de geboortedatums invullen van al zijn mede bewoners. Dit kost voor iemand die geen motorische stoornis heeft al wat moeite omdat je ver terug moet. Maar voor Marijn zal dit nog meer last bezorgen omdat hij daarmee nog langzamer is.
 Nu is er een datepicker waar standaard al de geboortedatums instaan van zijn dierbare personen. Maar hier staan ook datums in die hij vaak moet invullen of die hij zojuist ergens anders heeft ingevuld.
-
 
 Met deze user scenario ben ik opnieuw gaan kijken naar de huidige datepicker.
 
@@ -278,7 +283,7 @@ Het toevoegen van functies die misschien helemaal niet nodig zijn. Om zo misschi
 
 Om nonsense aan de app toe te voegen, speel ik speciale geluidseffecten af wanneer Marijn op de add calendar button klikt. Ook laat ik verschillende achtergronden zien op basis van de ingevulde datum.
 
-### Testen met gebruikers
+### Testen met klasgenoten
 Ik heb mijn applicatie met meerdere gebruikers getest. Hier zijn een paar aanbevelingen uit gekomen waar ik zelf nog over had nagedacht.
 
 #### Karin
