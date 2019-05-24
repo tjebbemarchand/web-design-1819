@@ -283,6 +283,9 @@ Het toevoegen van functies die misschien helemaal niet nodig zijn. Om zo misschi
 
 Om nonsense aan de app toe te voegen, speel ik speciale geluidseffecten af wanneer Marijn op de add calendar button klikt. Ook laat ik verschillende achtergronden zien op basis van de ingevulde datum.
 
+### Uiteindelijke resultaat
+![Datepicker](docs/final-result.jpg)
+
 ### Testen met klasgenoten
 Ik heb mijn applicatie met meerdere gebruikers getest. Hier zijn een paar aanbevelingen uit gekomen waar ik zelf nog over had nagedacht.
 
